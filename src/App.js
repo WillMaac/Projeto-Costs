@@ -1,40 +1,41 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
 import Home from "./components/pages/Home";
 import Company from "./components/pages/Company";
 import Contact from "./components/pages/Contact";
 import NewProject from "./components/pages/NewProject";
+import Projects from "./components/pages/projects";
 
 import Container from "./components/layouts/Container";
+import NavBar from './components/layouts/NavBar';
+import Footer from './components/layouts/Footer';
 
 function App() {
   return (
     <Router>
-      <div>
-        <Link to = '/'>Home</Link>
-        <Link to = '/contact'>Contato</Link>
-        <Link to = '/company'>Empresa</Link>
-        <Link to = '/newproject'>Novo projeto</Link>
-      </div>
+      <NavBar/>
       <Switch>
         <Container customClass='min-heigth'>
         <Route  exact path = '/'>
         <Home />
         </Route>
-        <Route   path = '/company'>
-        <Company/>
+        <Route   path = '/projects'>
+        <Projects/>
         </Route>
         <Route path = '/contact'>
         <Contact/>
+        </Route>
+        <Route path = '/company'>
+        <Company/>
         </Route>
         <Route path = '/newproject'>
         <NewProject/>
         </Route>
         </Container>
       </Switch>
-      <p>Footer</p>
+      <Footer />
     </Router>
   );
 }
