@@ -5,17 +5,26 @@
     color: #ffffff;
 }
 
-.item{
-    list-style: none;
+.social_list{
     display: flex;
     justify-content: center;
-    position: relative;
-    top: -20px;
-    gap: 80px;
-    cursor: pointer;
+    list-style-type: none;
+    
 }
 
-.footer_text{
-    position: relative;
-    bottom: -20px;
+.social_list li{
+margin: 0 1em;
+}
+
+.social_list li:hover{
+    color: #ffbb33;
+}
+
+.copy_right{
+    margin-top: 2em;
+}
+
+.copy_right span{
+    font-weight: bold;
+    color: #ffbb33;
 }

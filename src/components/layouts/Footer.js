@@ -3,7 +3,7 @@ import styles from './Footer.module.css';
 
 function Footer(){
     return (<footer className= {styles.footer}>
-            <ul className= {styles.item}>
+            <ul className= {styles.social_list}>
                 <li>
                     <FaFacebook size={30} color="#1877F2"/>
                 </li>
@@ -16,7 +16,7 @@ function Footer(){
                     <FaLinkedin size={30} color="#0A66C2" />
                 </li>
                 </ul>
-                <p className={styles.footer_text}><span>Costs</span> &copy; 2025
+                <p className={styles.copy_right}><span>Costs</span> &copy; 2025
                 </p>
         </footer>
     )
