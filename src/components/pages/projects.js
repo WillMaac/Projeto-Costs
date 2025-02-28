@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import Message from "../layouts/Message";
 import Container from '../layouts/Container';
+import Loading from "../layouts/Loading";
 import ProjectCard from "../project/projectCard";
 import LinkButton from '../layouts/LinkButton';
 import styles from './Project.module.css';
@@ -10,6 +11,7 @@ import { useState, useEffect } from "react";
 
 function Projects () {
 const [projects, setProjects] = useState([])
+const [removeLoading, setRemoveLoading] = useState(false)
 
     const location = useLocation()
     let menssage = ''
@@ -18,18 +20,21 @@ const [projects, setProjects] = useState([])
     }
 
     useEffect(()=>{
-        fetch('http://localhost:5000/projects', {
-            method:  'GET',
-            headers: {
-                 'Content-type': 'application/json',
-            },
-        })
-        .then((resp) => resp.json())
-        .then((data) => {
-            console.log(data);
-            setProjects(data)
-        })
-        .catch((error) => console.log(error));   
+           setTimeout(() =>{
+            fetch('http://localhost:5000/projects', {
+                method:  'GET',
+                headers: {
+                     'Content-type': 'application/json',
+                },
+            })
+            .then((resp) => resp.json())
+            .then((data) => {
+                console.log(data);
+                setProjects(data)
+                setRemoveLoading(true)
+            })
+            .catch((error) => console.log(error));
+           }, 400)
     }, [])
 
     return(
@@ -47,7 +52,12 @@ const [projects, setProjects] = useState([])
             budget={project.budget}
             category={project.category.name}
             key={project.id} 
-            />)}
+            />
+            )}
+            {!removeLoading && <Loading />}
+            {removeLoading && projects.length === 0 && (
+                <p>Não há projetos cadastrados!</p>
+            )}
             </Container>
         </div>
     )
