@@ -4,7 +4,7 @@ import Container from '../layouts/Container';
 import Loading from "../layouts/Loading";
 import ProjectCard from "../project/projectCard";
 import LinkButton from '../layouts/LinkButton';
-import styles from './Project.module.css';
+import styles from './Projects.module.css';
 import styles2 from '../layouts/LinkButton.module.css';
 import { useState, useEffect } from "react";
 
@@ -39,7 +39,7 @@ const [projectMessage, setProjectMessage] = useState('')
     }, [])
 
     function removeProject(id) {
-fetch(`http://localhost:5000/projects${id}`, {
+fetch(`http://localhost:5000/projects/${id}`, {
     method: 'DELETE',
     headers: {
         'Content-Type': 'application/json'

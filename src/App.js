@@ -7,6 +7,7 @@ import Company from "./components/pages/Company";
 import Contact from "./components/pages/Contact";
 import NewProject from "./components/pages/NewProject";
 import Projects from "./components/pages/projects";
+import Project2 from "./components/pages/Project2";
 
 import Container from "./components/layouts/Container";
 import NavBar from './components/layouts/NavBar';
@@ -21,17 +22,20 @@ function App() {
         <Route  exact path = '/'>
         <Home />
         </Route>
-        <Route   path = '/projects'>
+        <Route  path = '/projects'>
         <Projects/>
         </Route>
-        <Route path = '/contact'>
+        <Route  path = '/contact'>
         <Contact/>
         </Route>
-        <Route path = '/company'>
+        <Route  path = '/company'>
         <Company/>
         </Route>
-        <Route path = '/newproject'>
+        <Route  path = '/newproject'>
         <NewProject/>
+        </Route>
+        <Route  path = '/project/:id'>
+        <Project2 />
         </Route>
         </Container>
       </Switch>
