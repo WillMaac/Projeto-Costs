@@ -1,8 +1,8 @@
 {
   "projects": [
     {
-      "name": "Aplicativo",
-      "budget": "4000",
+      "name": "Aplicativo ",
+      "budget": "5000",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
@@ -12,11 +12,11 @@
       "id": 8
     },
     {
-      "name": "Projeto 3",
-      "budget": "1500",
+      "name": "Portfólio",
+      "budget": "1000",
       "category": {
-        "id": "1",
-        "name": "Infra"
+        "id": "2",
+        "name": "Desenvolvimento"
       },
       "cost": 0,
       "services": [],
