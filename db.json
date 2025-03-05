@@ -7,8 +7,28 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 950,
+      "services": [
+        {
+          "cost": "200",
+          "id": "2ff2f100-f48d-472f-8cab-fcd74f69a15c"
+        },
+        {
+          "name": "Novo atualização",
+          "cost": "250",
+          "id": "5b5a3f87-1186-4bc7-b3db-e6d124d6e5d9"
+        },
+        {
+          "name": "Novo atualização",
+          "cost": "250",
+          "id": "5b5a3f87-1186-4bc7-b3db-e6d124d6e5d9"
+        },
+        {
+          "name": "Novo atualização",
+          "cost": "250",
+          "id": "5b5a3f87-1186-4bc7-b3db-e6d124d6e5d9"
+        }
+      ],
       "id": 8
     },
     {
